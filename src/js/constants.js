@@ -1,6 +1,6 @@
 var a = "1";
 var obj = {
-	a
+  a
 }
 
 export default obj;
