@@ -35,21 +35,22 @@ gulp.task('build:html', function() {
 		.pipe(connect.reload());
 });
 
-
-
+// 页面功能复杂时组件化开发
 gulp.task('build:js', function() {
-	return gulp.src(['src/entries/*.js'])
+	return gulp.src(['src/entries/**/*.js'])
 		.pipe(named())
 		.pipe(webpack(webpackConfig))
 		.pipe(gulp.dest('dist/js/'))
 		.pipe(connect.reload());
 });
+
 gulp.task('build:img', function() {
 	return gulp.src('src/img/**/*.?(png|jpg|gif)')
 		.pipe(gulp.dest('dist/img'))
 		.pipe(connect.reload());
 });
 
+// 三方库
 gulp.task('build:libs', function() {
 	return gulp.src('src/libs/**/*.*')
 		.pipe(gulp.dest('dist/libs'))

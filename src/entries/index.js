@@ -1,2 +1,2 @@
-import obj from '../js/constants'
-console.log(obj.a)
+import a from './components'
+console.log(a + 1)
